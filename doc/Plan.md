@@ -4,19 +4,39 @@
 
 **Deliver:**
 
-*   A detailed written description of the problem this program aims to solve.
-*   Describe what a *good* solution looks like.
-    *   List what you already know how to do.
-    *   Point out any challenges that you can foresee.
+* A detailed written description of the problem this program aims to solve.
+  * Analyze a large csv file, and return certain data from the files. Data will be separated into 2 sections: a summary across all industries, and a summary of the software industry.
+  * The file to be read is 493MB, therefore it will need to read smaller chunks at a time for optimal performance.
+  * Create output that shows the desired data.
+* Describe what a *good* solution looks like.
+    * List what you already know how to do.
+      * Searching a document for desired information.
+      * Parsing through csv files.
+      * Manipulating Strings.
+      * Open files.
+      * Open files line by line.
+      * Closing files.
+      * Creating lists.
+      * Create new files based on old files.
+    * Point out any challenges that you can foresee.
+      * I don't know how to create a dictionary.
+      * I'm not sure that I fully understand what data we are looking for.
 
 
 ## Phase 1: System Analysis *(10%)*
 
 **Deliver:**
 
-*   List all of the data that is used by the program, making note of where it comes from.
-*   Explain what form the output will take.
-*   Describe what algorithms and formulae will be used (but don't write them yet).
+* List all of the data that is used by the program, making note of where it comes from.
+  * What data do I need to collect?:
+    * Area Fips
+    * Industry Code
+    * Own Code
+    * Total Annual Wages
+    * Annual Average Employment Level
+    * Annual Average Establishments
+* Explain what form the output will take.
+* Describe what algorithms and formulae will be used (but don't write them yet).
 
 
 ## Phase 2: Design *(30%)*
