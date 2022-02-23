@@ -88,7 +88,7 @@ Maximum reported employment level    {self.all.max_empl[1]:,}
 
 Statistics over the software publishing industry in {self.year}:    	         	  
 =========================================================           	         	  
-Number of FIPS areas in report       {self.soft.num_areas:,}        	         	  
+Number of FIPS areas in report       {self.soft.num_areas:,}            	         	  
 
 Total annual wages                   ${self.soft.total_annual_wages:,}        	  
 Area with maximum annual wages       {self.soft.max_annual_wage[0]} 	         	  

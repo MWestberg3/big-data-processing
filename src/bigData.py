@@ -29,17 +29,46 @@ import sys
 from Report import Report                                           	         	  
 
 
-rpt = Report(year=2020)                                             	         	  
+rpt = Report(year=2020)
 
-if __name__ == '__main__':                                          	         	  
-    print("TODO: if sys.argv[1] is not given, print a usage message and exit")  # DELETE ME
+
+def openAndReadAlias(fileName):
+    file = open(fileName, "r")
+    areaTitles = {}
+    done = False
+    while not done:
+        readOneLine = file.readline()
+        if readOneLine == "":
+            done = True
+        elif readOneLine.startswith("\"area_fips\""):
+            continue
+        elif readOneLine.startswith("\"US"):
+            continue
+        elif readOneLine.find("000\",\"") != -1:
+            continue
+        elif readOneLine.startswith("\"C"):
+            continue
+        else:
+            readOneLine = readOneLine.lstrip("\"")
+            readOneLine = readOneLine.rstrip("\n")
+            readOneLine = readOneLine.rstrip("\"")
+            oneLineArray = readOneLine.split("\",\"")
+            areaTitles[oneLineArray[0]] = oneLineArray[1]
+
+    return areaTitles
+
+
+if __name__ == '__main__':
+    if len(sys.argv) <= 1:
+        print("No file given")
+        sys.exit(1)
 
     print("Reading the databases...", file=sys.stderr)              	         	  
     before = time.time()                                            	         	  
 
-    print("TODO: if opening the file 'sys.argv[1]/area_titles.csv' fails, let your program crash here")  # DELETE ME
-    print("TODO: Convert the file 'sys.argv[1]/area_titles.csv' into a dictionary")  # DELETE ME
-
+    fileName = sys.argv[1] + "/area_titles.csv"
+    areaTitles = openAndReadAlias(fileName)
+    print(areaTitles)
     print("TODO: if opening the file 'sys.argv[1]/2020.annual.singlefile.csv' fails, let your program crash here")  # DELETE ME
     print("TODO: Collect information from 'sys.argv[1]/2020.annual.singlefile.csv', place into the Report object rpt")  # DELETE ME
 

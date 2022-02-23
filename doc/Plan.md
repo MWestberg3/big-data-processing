@@ -29,12 +29,13 @@
 
 * List all of the data that is used by the program, making note of where it comes from.
   * What data do I need to collect?:
-    * Area Fips
-    * Industry Code
-    * Own Code
-    * Total Annual Wages
-    * Annual Average Employment Level
-    * Annual Average Establishments
+    * Area Fips (area_fips) (field #1) (data type: text)
+      * 
+    * Industry Code (industry_code) (field #3) (data type: text)
+    * Own Code (own_code) (field #2) (data type: text)
+    * Total Annual Wages (total_annual_wages) (field #16) (data type: Numeric)
+    * Annual Average Employment Level (annual_avg_emplvl) (field #15) (data type: numeric)
+    * Annual Average Establishments (annual_avg_estabs) (field # 14) (data type: numeric)
 * Explain what form the output will take.
 * Describe what algorithms and formulae will be used (but don't write them yet).
 
