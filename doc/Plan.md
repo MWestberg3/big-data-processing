@@ -30,7 +30,6 @@
 * List all of the data that is used by the program, making note of where it comes from.
   * What data do I need to collect?:
     * Area Fips (area_fips) (field #1) (data type: text)
-      * 
     * Industry Code (industry_code) (field #3) (data type: text)
     * Own Code (own_code) (field #2) (data type: text)
     * Total Annual Wages (total_annual_wages) (field #16) (data type: Numeric)
@@ -44,15 +43,15 @@
 
 **Deliver:**
 
-*   Function signatures that include:
-    *   Descriptive names.
-    *   Parameter lists.
-    *   Documentation strings that explain the purpose, inputs and outputs.
-*   Pseudocode that captures how each function works.
-    *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
-    *   Explain what happens in the face of good and bad input.
-    *   Write a few specific examples that occurred to you.
-
+* Function signatures that include:
+    *   openAndCloseAlias(fileName)
+* Pseudocode that captures how each function works.
+    * openAndCloseAlias(fileName)
+      * open file
+      * create an empty dictionary
+      * begin a while loop that will check each line (open file line by line) for data we want to add to dictionary
+      * once we clear all the data we don't want, strip the quotes, the new lines, and split the data at the ",", and add it to the dictionary
+    * return the dictionary
 
 ## Phase 3: Implementation *(15%)*
 

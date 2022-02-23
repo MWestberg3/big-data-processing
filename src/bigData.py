@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
     fileName = sys.argv[1] + "/area_titles.csv"
     areaTitles = openAndReadAlias(fileName)
-    print(areaTitles)
+
     print("TODO: if opening the file 'sys.argv[1]/2020.annual.singlefile.csv' fails, let your program crash here")  # DELETE ME
     print("TODO: Collect information from 'sys.argv[1]/2020.annual.singlefile.csv', place into the Report object rpt")  # DELETE ME
 
