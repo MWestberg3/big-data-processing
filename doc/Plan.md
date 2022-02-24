@@ -89,8 +89,9 @@
 **Deliver:**
 
 *   A set of test cases that you have personally run on your computer.
-    *   Include a description of what happened for each test case.
-    *   For any bugs discovered, describe their cause and remedy.
+    * I ran a test on CT_combined, failed.
+      * the total establishments was passing in the wrong data. I was passing in the actual number, rather than the area_fips. Caused an error where it couldn't find the desired fips area code.
+      * fixed the code on line 108 to access the dictionary areaTitlesDict and specifically the area_fips in oneRowDict
 *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
 
 

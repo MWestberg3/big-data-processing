@@ -24,10 +24,9 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS	  
 # IN THE SOFTWARE.                                                  	         	  
 
-import time                                                         	         	  
-import sys                                                          	         	  
-from Report import Report                                           	         	  
-
+import time
+import sys
+from Report import Report
 
 rpt = Report(year=2020)
 
@@ -49,6 +48,7 @@ def openAndReadAlias(fileName):
         elif readOneLine.startswith("\"C"):
             continue
         else:
+            # strip array and add to dictionary
             readOneLine = readOneLine.lstrip("\"")
             readOneLine = readOneLine.rstrip("\n")
             readOneLine = readOneLine.rstrip("\"")
@@ -57,8 +57,11 @@ def openAndReadAlias(fileName):
 
     return areaTitlesDict
 
+
 def openAndReadAnnualFile(annualFileName, areaTitlesDict, rpt):
     file = open(annualFileName, "r")
+
+    # get keys for dictionary
     readKeys = file.readline()
     readKeys = readKeys.lstrip("\"")
     readKeys = readKeys.rstrip("\n")
@@ -70,7 +73,7 @@ def openAndReadAnnualFile(annualFileName, areaTitlesDict, rpt):
         valueOneLine = file.readline()
         if valueOneLine == "":
             break
-
+        # get values for dictionary
         valueOneLine = valueOneLine.replace("\"", "")
         valueOneLine = valueOneLine.rstrip("\n")
         valueArray = valueOneLine.split(",")
@@ -114,13 +117,16 @@ def openAndReadAnnualFile(annualFileName, areaTitlesDict, rpt):
             rptHandle.max_empl[1] = totalEmploy
             rptHandle.max_empl[0] = areaTitlesDict[oneRowDict["area_fips"]]
 
+
+# driver file
+
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
         print("No file given")
         sys.exit(1)
 
-    print("Reading the databases...", file=sys.stderr)              	         	  
-    before = time.time()                                            	         	  
+    print("Reading the databases...", file=sys.stderr)
+    before = time.time()
 
     fileName = sys.argv[1] + "/area_titles.csv"
     areaTitlesDict = openAndReadAlias(fileName)
@@ -128,10 +134,8 @@ if __name__ == '__main__':
     annualFileName = sys.argv[1] + "/2020.annual.singlefile.csv"
     openAndReadAnnualFile(annualFileName, areaTitlesDict, rpt)
 
-    after = time.time()                                             	         	  
-    print(f"Done in {after - before:.3f} seconds!", file=sys.stderr)	         	  
+    after = time.time()
+    print(f"Done in {after - before:.3f} seconds!", file=sys.stderr)
 
     # Print the completed report
-    print(rpt)                                                      	         	  
-
-    print("\n\nTODO: did you delete all of these TODO messages?")  # DELETE ME	  
+    print(rpt)
