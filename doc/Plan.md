@@ -70,7 +70,10 @@
         * add 1 to the successful fips area codes
         * add the total annual wages to the handle's total annual wages
         * test if the total annual wage is the max, if so, update the handle, and get the location
-        * Ω
+        * add the total establishments to the total estab handle (this gives you the total establishments)
+        * test if the total establishments is the max by comparing to the current handle. If so, update the handle and get the location
+        * add the total employees to the total employee handle (this updates the handle for the total employees)
+        * test if the total employee is the max by comparing to the current handle. If the current iteration is larger than the current handle, get the value and the location 
 
 ## Phase 3: Implementation *(15%)*
 
@@ -78,9 +81,9 @@
 
 *   (More or less) working code.
 *   Note any relevant and interesting events that happened while you wrote the code.
-    *   e.g. things you learned, things that didn't go according to plan
-
-
+    * I absolutely loved learning about dictionaries. I had no idea how to use them at all prior, and it was very interesting learning about them.
+    * I think dictionaries are very useful to access data. I feel like you can do similar actions with lists and making constants, but it was very organized, and there were less items to change because I was using a list.
+    
 ## Phase 4: Testing & Debugging *(30%)*
 
 **Deliver:**
