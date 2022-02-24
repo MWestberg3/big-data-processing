@@ -6,3 +6,4 @@ __pycache__
 *.bak
 *.csv
 !area_titles.csv
+testing.py
