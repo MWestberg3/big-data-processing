@@ -116,15 +116,24 @@
 **Deliver:**
 
 *   Write brief and honest answers to these questions: *(Note: do this before you complete **Phase 5: Deployment**)*
-    *   What parts of your program are sloppily written and hard to understand?
-        *   Are there parts of your program which you aren't quite sure how/why they work?
-        *   If a bug is reported in a few months, how long would it take you to find the cause?
-    *   Will your documentation make sense to...
-        *   ...anybody besides yourself?
-        *   ...yourself in six month's time?
-    *   How easy will it be to add a new feature to this program in a year?
-    *   Will your program continue to work after upgrading...
-        *   ...your computer's hardware?
-        *   ...the operating system?
-        *   ...to the next version of Python?
+    * What parts of your program are sloppily written and hard to understand?
+        * Are there parts of your program which you aren't quite sure how/why they work?
+          * I don't entirely understand the Report.py code. The handle variable I created makes sense to me (I received help from a tutor), however, I definitely need some more practice.
+          * I think if I take some extra time and study more about how the rpt function call works, that would be very beneficial to me in the end.
+        * If a bug is reported in a few months, how long would it take you to find the cause?
+          * I think I could find it pretty quickly. I am learning more about how to use the debugger, and I could figure out where to put the check points. Also, using the wolf hunt method would really help me to narrow down where to find the bug. 
+    * Will your documentation make sense to...
+        * ...anybody besides yourself?
+          * yes. I think I documented this one a lot better than my last assignment. Especially using english instead of computer language.
+        * ...yourself in six month's time?
+          * Yes. I think especially me, looking side by side with the code, would be able to follow the methods I created and what the goals are for each method.
+    * How easy will it be to add a new feature to this program in a year?
+      * I think it would be pretty difficult to add a feature to the program. I would have to change quite a bit. It would take a lot of effort on my part.
+    * Will your program continue to work after upgrading...
+        * ...your computer's hardware?
+          * yes. My hardware would be able to run it.
+        * ...the operating system?
+          * I believe so. I don't see why it wouldn't.
+        * ...to the next version of Python?
+          * If they change the way you call and create dictionaries, that would greatly hinder the program. Also, the way I called rpt, and sorted that data, if python chanes the way that is handled, that would ruin the program.
 *   Fill out the Assignment Reflection on Canvas.
